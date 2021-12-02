@@ -1,6 +1,8 @@
 const { Sequelize, DataTypes } = require('sequelize')
 const ArticleModel = require('../models/article')
+const UserModel = require('../models/user')
 const articles = require('./articles')
+const bcrypt = require('bcrypt')
   
 const sequelize = new Sequelize('global', 'root', '', {
   host: 'localhost',
@@ -12,6 +14,7 @@ const sequelize = new Sequelize('global', 'root', '', {
 })
   
 const Article = ArticleModel(sequelize, DataTypes)
+const User = UserModel(sequelize, DataTypes)
   
 const initDb = () => {
   return sequelize.sync({force: true}).then(_ => {
@@ -25,10 +28,22 @@ const initDb = () => {
         article_category: article.article_category,
       }).then(article => console.log(article.toJSON()))
     })
+
+    bcrypt.hash('Tototiti123', 10)
+    .then(hash => {
+      User.create({
+        first_name: 'Joel',
+        last_name: 'Dowono',
+        user_mail: 'joeldowono1@gmail.com',
+        user_password: hash
+      })
+    })
+    .then(user => console.log(user.toJSON()))
+
     console.log('La base de donnée a bien été initialisée !')
   })
 }
   
 module.exports = { 
-  initDb, Article
+  initDb, Article, User
 }

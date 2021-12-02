@@ -3,6 +3,8 @@ const morgan = require('morgan')
 const favicon = require('serve-favicon')
 const bodyParser = require('body-parser')
 const sequelize = require('./src/db/sequelize')
+const cors = require('cors')
+
   
 const app = express()
 const port = 3000
@@ -11,6 +13,7 @@ app
     .use(favicon(__dirname + '/favicon.ico'))
     .use(morgan('dev'))
     .use(bodyParser.json())
+    .use(cors())
 
 sequelize.initDb()
 
@@ -20,6 +23,7 @@ require('./src/routes/findArticleByPk')(app)
 require('./src/routes/createArticle')(app)
 require('./src/routes/updateArticle')(app)
 require('./src/routes/deleteArticle')(app)
+require('./src/routes/login')(app)
 
 //gestion des erreurs 404
 app.use(({res}) => {

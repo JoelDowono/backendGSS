@@ -35,6 +35,17 @@ const initDb = () => {
         first_name: 'Joel',
         last_name: 'Dowono',
         user_mail: 'joeldowono1@gmail.com',
+        user_role: 'administrateur',
+        user_password: hash
+      })
+    })
+    bcrypt.hash('Tototiti12345', 10)
+    .then(hash => {
+      User.create({
+        first_name: 'Tamo',
+        last_name: 'Rita',
+        user_mail: 'tamorita@gmail.com',
+        user_role: 'administrateur',
         user_password: hash
       })
     })

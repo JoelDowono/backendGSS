@@ -1,6 +1,8 @@
 const { Article } = require('../db/sequelize')
 const { Op } = require('sequelize')
-  
+
+
+
 module.exports = (app) => {
   app.get('/api/articles', (req, res) => {
     if (req.query.article_name) {
@@ -26,10 +28,10 @@ module.exports = (app) => {
       })
     }
     else {
-      Article.findAll({ order: ['article_name'] })
-        .then(article => {
+      Article.findAndCountAll({ order: ['article_name'], limit: 6 })
+        .then(({ count, rows}) => {
           const message = 'La liste des articles a bien été récupérée.' 
-          res.json({ message, data: article })
+          res.json({ message, data: rows, count })
         })
         .catch(error => {
           const message = `La liste des articles n'a pas pu être récupérée. Réesseyer dans quelques instants.`

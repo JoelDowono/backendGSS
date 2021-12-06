@@ -24,6 +24,9 @@ require('./src/routes/createArticle')(app)
 require('./src/routes/updateArticle')(app)
 require('./src/routes/deleteArticle')(app)
 require('./src/routes/login')(app)
+require('./src/routes/createUser')(app)
+require('./src/routes/updateUser')(app)
+require('./src/routes/deleteUser')(app)
 
 //gestion des erreurs 404
 app.use(({res}) => {

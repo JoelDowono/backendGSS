@@ -27,6 +27,7 @@ require('./src/routes/login')(app)
 require('./src/routes/createUser')(app)
 require('./src/routes/updateUser')(app)
 require('./src/routes/deleteUser')(app)
+require('./src/routes/findUserByPk')(app)
 
 //gestion des erreurs 404
 app.use(({res}) => {

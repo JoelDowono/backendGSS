@@ -1,7 +1,8 @@
 const { Article } = require('../db/sequelize')
+const authorization = require('../auth/auth')
   
 module.exports = (app) => {
-  app.delete('/api/articles/:id', (req, res) => {
+  app.delete('/api/articles/:id', authorization, (req, res) => {
     Article.findByPk(req.params.id).then(article => {
       if (article === null) {
         const message = "L'article demandé n\'exite pas. Réessayer avec un autre identifiant."

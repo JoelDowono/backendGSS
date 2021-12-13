@@ -28,7 +28,9 @@ module.exports = (app) => {
       })
     }
     else {
-      Article.findAndCountAll({ order: ['article_name'], limit: 6 })
+      let page = req.query.page?req.query.page: 0
+      let offset = page*6 
+      Article.findAndCountAll({ order: ['article_name'], limit: 6, offset: offset }) 
         .then(({ count, rows}) => {
           const message = 'La liste des articles a bien été récupérée.' 
           res.json({ message, data: rows, count })

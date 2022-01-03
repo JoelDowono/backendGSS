@@ -28,6 +28,9 @@ require('./src/routes/createUser')(app)
 require('./src/routes/updateUser')(app)
 require('./src/routes/deleteUser')(app)
 require('./src/routes/findUserByPk')(app)
+require('./src/routes/createOrder')(app)
+require('./src/routes/findOrderByUserId')(app)
+
 
 //gestion des erreurs 404
 app.use(({res}) => {

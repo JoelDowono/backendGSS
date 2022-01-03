@@ -5,7 +5,7 @@ const articles = [
         article_price: 1311.92,
         article_quantity: 3,
         article_picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png",
-        article_category: "school",
+        article_category: "School",
         article_created: new Date()
     },
     {
@@ -14,7 +14,7 @@ const articles = [
         article_price: 1000.00,
         article_quantity: 3,
         article_picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png",
-        article_category: "school",
+        article_category: "School",
         article_created: new Date()
     },
     {
@@ -23,7 +23,7 @@ const articles = [
         article_price: 400.00,
         article_quantity: 3,
         article_picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png",
-        article_category: "school",
+        article_category: "School",
         article_created: new Date()
     },
     {
@@ -32,7 +32,7 @@ const articles = [
         article_price: 300.00,
         article_quantity: 1,
         article_picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png",
-        article_category: "desk",
+        article_category: "Desk",
         article_created: new Date()
     },
     {
@@ -41,7 +41,7 @@ const articles = [
         article_price: 300.00,
         article_quantity: 1,
         article_picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png",
-        article_category: "school",
+        article_category: "School",
         article_created: new Date()
     },
     {
@@ -50,7 +50,7 @@ const articles = [
         article_price: 400.00,
         article_quantity: 1,
         article_picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png",
-        article_category: "desk",
+        article_category: "Desk",
         article_created: new Date()
     },
     {
@@ -59,7 +59,7 @@ const articles = [
         article_price: 300.00,
         article_quantity: 1,
         article_picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png",
-        article_category: "other",
+        article_category: "Other",
         article_created: new Date()
     },
     {
@@ -68,7 +68,7 @@ const articles = [
         article_price: 500.00,
         article_quantity: 2,
         article_picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png",
-        article_category: "school",
+        article_category: "School",
         article_created: new Date()
     },
     {
@@ -77,7 +77,7 @@ const articles = [
         article_price: 550.00,
         article_quantity: 6,
         article_picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png",
-        article_category: "school",
+        article_category: "School",
         article_created: new Date()
     },
     {
@@ -86,7 +86,7 @@ const articles = [
         article_price: 300.00,
         article_quantity: 4,
         article_picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png",
-        article_category: "school",
+        article_category: "School",
         article_created: new Date()
     },
     {
@@ -95,7 +95,7 @@ const articles = [
         article_price: 400.00,
         article_quantity: 4,
         article_picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png",
-        article_category: "desk",
+        article_category: "Desk",
         article_created: new Date()
     },
     {
@@ -104,7 +104,7 @@ const articles = [
         article_price: 300.00,
         article_quantity: 4,
         article_picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png",
-        article_category: "desk",
+        article_category: "Desk",
         article_created: new Date()
     },
 ]

@@ -37,7 +37,7 @@ module.exports = (Sequelize, DataTypes) => {
       }
     },
     article_picture: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(2000),
       allowNull: false,
       validate: {
         isUrl: { msg: 'Utiliser uniquement une Url valide pour l\'image.' },

@@ -17,6 +17,9 @@ module.exports = (sequelize, DataTypes) => {
         },
         user_password: {
             type: DataTypes.STRING,
+        },
+        agree: {
+            type: DataTypes.BOOLEAN,
         }
     })
 }

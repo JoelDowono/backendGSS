@@ -107,6 +107,15 @@ const articles = [
         article_category: "Desk",
         article_created: new Date()
     },
+    {
+        article_name: "bic rouge",
+        article_description: "bic rouge bonne qualité.",
+        article_price: 100.00,
+        article_quantity: 20,
+        article_picture: "https://images.app.goo.gl/FRekMBKBFkL4QP6M9",
+        article_category: "School",
+        article_created: new Date()
+    },
 ]
 
 module.exports = articles

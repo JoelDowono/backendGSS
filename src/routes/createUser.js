@@ -5,6 +5,7 @@ const bcrypt = require('bcrypt')
 module.exports = (app) => {
   app.post('/api/users', async (req, res) => {
     req.body.user_password =  await bcrypt.hash(req.body.user_password, 10);
+    req.body.roleId = 3;
     User.create(req.body)
       .then(user => {
         const message = `L'utilisateur ${req.body.first_name} a bien été crée.`

@@ -30,6 +30,7 @@ require('./src/routes/deleteUser')(app)
 require('./src/routes/findUserByPk')(app)
 require('./src/routes/createOrder')(app)
 require('./src/routes/findOrderByUserId')(app)
+require('./src/routes/findAllOrders')(app)
 
 
 //gestion des erreurs 404

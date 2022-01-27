@@ -3,7 +3,7 @@ const { ValidationError, UniqueConstraintError } = require('sequelize')
 const bcrypt = require('bcrypt')
 
 module.exports = (app) => {
-  app.post('/api/users', async (req, res) => {
+  app.post('/api/users', async (req, res) => { // async permet d'attendre le traitement de bcrypt 
     req.body.user_password =  await bcrypt.hash(req.body.user_password, 10);
     req.body.roleId = 3;
     User.create(req.body)

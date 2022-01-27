@@ -51,8 +51,13 @@ module.exports = (Sequelize, DataTypes) => {
         notEmpty: { msg: 'la catégorie ne doit pas être vide' },
         notNull: { msg: 'La catégorie est une propriété requise '}
       }
+    },
+    article_deleted: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false
     }
-  }, {
+  },
+  {
     timestamps: true,
     createdAt: 'article_created',
     updatedAt: false

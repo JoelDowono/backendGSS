@@ -4,7 +4,7 @@ module.exports = (app) => {
   app.get('/api/articles/:id', (req, res) => {
     Article.findByPk(req.params.id)
       .then(article => {
-        if (article === null) {
+        if (article === null || article.article_deleted) {
           const message = "L'article demandé n\'exite pas. Réessayer avec un autre identifiant."
           return res.status(404).json({ message })
         }

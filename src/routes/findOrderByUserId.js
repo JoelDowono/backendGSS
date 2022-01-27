@@ -16,6 +16,6 @@ module.exports = (app) => {
 
       res.json({ message:'test order', data: order })
   })
-
-
 }
+
+//point de terminaison quipermet de rechercher les commandes d'un utilisateur 

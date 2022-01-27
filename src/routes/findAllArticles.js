@@ -17,7 +17,8 @@ module.exports = (app) => {
         where: { 
           article_name: {
             [Op.like]: `%${name}%`
-          }
+          },
+          article_deleted: false
         },
         order: ['article_name'],
         limit: 8
@@ -30,7 +31,7 @@ module.exports = (app) => {
     else {
       let page = req.query.page?req.query.page: 0
       let offset = page*6 
-      Article.findAndCountAll({ order: ['article_name'], limit: 6, offset: offset }) 
+      Article.findAndCountAll({ where:{article_deleted: false}, order: ['article_name'], limit: 6, offset: offset }) 
         .then(({ count, rows}) => {
           const message = 'La liste des articles a bien été récupérée.' 
           res.json({ message, data: rows, count })

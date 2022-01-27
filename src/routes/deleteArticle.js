@@ -9,10 +9,11 @@ module.exports = (app) => {
         return res.status(404).json({ message })
       }
       const articleDeleted = article;
-      return Article.destroy({
+      return Article.update({article_deleted: true},{
         where: { id: article.id }
       })
       .then(_ => {
+        articleDeleted.article_deleted = true;
         const message = `L'article avec l'identifiant n°${articleDeleted.id} a bien été supprimé.`
         res.json({message, data: articleDeleted })
       })

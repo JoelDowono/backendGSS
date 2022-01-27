@@ -3,7 +3,7 @@ const { ValidationError, UniqueConstraintError } = require('sequelize')
 const authorization = require('../auth/auth')
   
 module.exports = (app) => {
-  app.post('/api/articles', authorization, (req, res) => {
+  app.post('/api/articles', authorization, (req, res) => { //avant de créer l'article on exécute le midleware pour s'assurer que l'utilisateur possède un token et que celui-ci est bien valide 
     Article.create(req.body)
       .then(article => {
         const message = `L'article ${req.body.article_name} a bien été crée.`

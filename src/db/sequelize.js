@@ -1,13 +1,12 @@
+//imports
 const { Sequelize, DataTypes } = require('sequelize')
 const ArticleModel = require('../models/article')
 const UserModel = require('../models/user')
-const articles = require('./articles')
-const bcrypt = require('bcrypt')
 const RoleModel = require('../models/role')
 const OrderModel = require('../models/order')
 const OrderArticleModel = require('../models/orderArticle')
   
-const sequelize = new Sequelize('global', 'root', '', {
+const sequelize = new Sequelize('global', 'root', 'Tototiti123', {
   host: 'localhost',
   dialect: 'mysql',
   dialectOptions: {
@@ -16,6 +15,7 @@ const sequelize = new Sequelize('global', 'root', '', {
   logging: false
 })
   
+//relations multiple entre les articles et les commandes 
 const Article = ArticleModel(sequelize, DataTypes)
 const User = UserModel(sequelize, DataTypes)
 const Role = RoleModel(sequelize, DataTypes)
